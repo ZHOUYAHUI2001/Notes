@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/colorBlack"
+        android:orientation="vertical"
+        android:showDividers="end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="日记本首页"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/ibt_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="30dp"
+                android:layout_weight="2.5"
+                android:background="@color/colorTransprent"
+                android:minHeight="48dp"
+                android:onClick="search"
+                android:src="@drawable/ic_action_search"
+                android:visibility="visible"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:id="@+id/ibt_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="30dp"
+                android:layout_weight="2.5"
+                android:background="@color/colorTransprent"
+                android:minHeight="48dp"
+                android:onClick="setting"
+                android:src="@drawable/ic_action_setting"
+                android:visibility="visible"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="8dp"
+        android:onClick="add"
+        android:src="@drawable/ic_baseline_add_24"
+        app:borderWidth="0dp"
+        app:pressedTranslationZ="16dp"
+        app:rippleColor="#006400" />
+</FrameLayout>
